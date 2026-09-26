@@ -14,6 +14,12 @@ export default function Hero() {
         <p className="mt-4 max-w-md text-[15px] leading-relaxed text-cream/80">
           Considered essentials in durable, natural fabrics — cut for everyday wear, designed to outlast trends.
         </p>
+        <a
+          href="#explore"
+          className="mt-7 inline-flex items-center gap-2 rounded-full bg-cream px-8 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-charcoal transition-colors hover:bg-mint"
+        >
+          Shop Now
+        </a>
       </div>
     </section>
   )
