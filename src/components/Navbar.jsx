@@ -19,10 +19,10 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 border-b border-sand/70 bg-cream/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-nav/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
-        <a href="#top" className="font-display text-2xl font-semibold tracking-wide text-charcoal">
-          Verde <span className="text-brand">Wear</span>
+        <a href="#top" className="font-display text-2xl font-semibold tracking-wide text-white">
+          Verde <span className="text-mint">Wear</span>
         </a>
 
         <nav className="hidden items-center gap-10 md:flex">
@@ -30,7 +30,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="text-[13px] font-medium uppercase tracking-[0.18em] text-charcoal/80 transition-colors hover:text-brand"
+              className="text-[13px] font-medium uppercase tracking-[0.18em] text-white transition-colors hover:text-mint"
             >
               {link.label}
             </a>
@@ -38,18 +38,18 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-5 md:flex">
-          <button type="button" aria-label="Search" className="text-charcoal/80 transition-colors hover:text-brand">
+          <button type="button" aria-label="Search" className="text-white transition-colors hover:text-mint">
             <Search01Icon size={22} />
           </button>
-          <button type="button" aria-label="Wishlist" className="text-charcoal/80 transition-colors hover:text-brand">
+          <button type="button" aria-label="Wishlist" className="text-white transition-colors hover:text-mint">
             <FavouriteIcon size={22} />
           </button>
-          <button type="button" aria-label="Profile" className="text-charcoal/80 transition-colors hover:text-brand">
+          <button type="button" aria-label="Profile" className="text-white transition-colors hover:text-mint">
             <UserCircleIcon size={22} />
           </button>
-          <button type="button" aria-label="Cart" className="relative text-charcoal/80 transition-colors hover:text-brand">
+          <button type="button" aria-label="Cart" className="relative text-white transition-colors hover:text-mint">
             <ShoppingCart01Icon size={22} />
-            <span className="absolute -right-1.5 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-brand text-[10px] font-semibold text-cream">
+            <span className="absolute -right-1.5 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-mint text-[10px] font-semibold text-nav">
               2
             </span>
           </button>
@@ -57,7 +57,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className="text-charcoal md:hidden"
+          className="text-white md:hidden"
           aria-label="Toggle menu"
           onClick={() => setOpen((o) => !o)}
         >
@@ -66,20 +66,20 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="border-t border-sand/70 bg-cream px-6 pb-6 md:hidden">
+        <div className="border-t border-white/10 bg-nav px-6 pb-6 md:hidden">
           <nav className="flex flex-col gap-4 pt-4">
             {links.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium uppercase tracking-[0.18em] text-charcoal/80"
+                className="text-sm font-medium uppercase tracking-[0.18em] text-white"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
               </a>
             ))}
           </nav>
-          <div className="mt-5 flex items-center gap-6 border-t border-sand/70 pt-5">
+          <div className="mt-5 flex items-center gap-6 border-t border-white/10 pt-5 text-white">
             <Search01Icon size={22} />
             <FavouriteIcon size={22} />
             <UserCircleIcon size={22} />
