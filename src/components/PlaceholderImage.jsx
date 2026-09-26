@@ -1,18 +1,15 @@
 import GarmentArt from './GarmentArt'
 
 const tones = {
-  sage: { bg: 'from-sand via-cream-dark to-sand', ink: 'text-charcoal/55' },
-  green: { bg: 'from-brand/25 via-brand/10 to-cream-dark', ink: 'text-brand-dark' },
-  mint: { bg: 'from-mint/25 via-cream-dark to-sand', ink: 'text-brand-dark' },
-  charcoal: { bg: 'from-charcoal via-charcoal/90 to-ink', ink: 'text-mint' },
+  dark: 'from-dark via-dark/80 to-mid',
+  mid: 'from-mid via-mid/80 to-dark',
 }
 
 // Editorial-style stand-in tile with a hand-drawn garment icon — swap for real photography.
 // Pass `decorative` when the tile sits behind foreground text (hero/video banners) so the
 // icon + label don't compete with the overlay copy.
-export default function PlaceholderImage({ label, variant = 'tee', tone = 'sage', decorative = false, className = '' }) {
-  const { bg, ink } = tones[tone] ?? tones.sage
-  const dark = tone === 'charcoal'
+export default function PlaceholderImage({ label, variant = 'tee', tone = 'dark', decorative = false, className = '' }) {
+  const bg = tones[tone] ?? tones.dark
 
   return (
     <div className={`relative flex h-full w-full items-center justify-center overflow-hidden bg-gradient-to-br ${bg} ${className}`}>
@@ -21,16 +18,14 @@ export default function PlaceholderImage({ label, variant = 'tee', tone = 'sage'
         style={{
           backgroundImage:
             'repeating-linear-gradient(135deg, currentColor 0, currentColor 1px, transparent 1px, transparent 16px)',
-          color: dark ? '#f7f8f4' : '#1f2620',
+          color: '#ffffff',
         }}
       />
       {!decorative && (
         <div className="relative flex flex-col items-center gap-3 px-4 text-center">
-          <GarmentArt variant={variant} className={`h-16 w-16 md:h-20 md:w-20 ${ink}`} />
+          <GarmentArt variant={variant} className="h-16 w-16 text-white/70 md:h-20 md:w-20" />
           {label && (
-            <span className={`text-[11px] font-medium uppercase tracking-[0.15em] ${dark ? 'text-cream/60' : 'text-charcoal/45'}`}>
-              {label}
-            </span>
+            <span className="text-[11px] font-medium uppercase tracking-[0.15em] text-white/70">{label}</span>
           )}
         </div>
       )}

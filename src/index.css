@@ -4,18 +4,8 @@
   --font-display: 'Cormorant Garamond', 'Georgia', serif;
   --font-sans: 'Jost', 'Helvetica Neue', Arial, sans-serif;
 
-  --color-cream: #f7f8f4;
-  --color-cream-dark: #edefe6;
-  --color-mist: #eaf5ee;
-  --color-sand: #dde3d6;
-  --color-brand: #34a86e;
-  --color-brand-dark: #24704a;
-  --color-deep: #163d29;
-  --color-mint: #2fc48d;
-  --color-nav: #646c5f;
-  --color-charcoal: #1f2620;
-  --color-ink: #14180f;
-  --color-stone: #767d70;
+  --color-dark: #41473d;
+  --color-mid: #646c5f;
 }
 
 html {
@@ -24,16 +14,16 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--color-cream);
-  color: var(--color-ink);
+  background-color: var(--color-dark);
+  color: white;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background: var(--color-brand);
-  color: var(--color-cream);
+  background: var(--color-mid);
+  color: white;
 }
 
 .font-display {

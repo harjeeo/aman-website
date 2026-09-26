@@ -25,16 +25,16 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="contact-us" className="bg-cream-dark py-16">
+    <section id="contact-us" className="bg-dark py-16">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {services.map(({ icon: Icon, title, detail }) => (
             <div key={title} className="flex flex-col items-center text-center sm:items-start sm:text-left">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand/15 text-brand-dark">
+              <span className="flex h-12 w-12 items-center justify-center rounded-full border border-white/30 text-white">
                 <Icon size={24} />
               </span>
-              <h3 className="font-display mt-4 text-lg text-charcoal">{title}</h3>
-              <p className="mt-1 text-sm leading-relaxed text-stone">{detail}</p>
+              <h3 className="font-display mt-4 text-lg text-white">{title}</h3>
+              <p className="mt-1 text-sm leading-relaxed text-white/70">{detail}</p>
             </div>
           ))}
         </div>

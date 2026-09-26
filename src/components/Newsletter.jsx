@@ -1,9 +1,9 @@
 export default function Newsletter() {
   return (
-    <section className="bg-charcoal py-16">
+    <section className="bg-mid py-16">
       <div className="mx-auto max-w-3xl px-6 text-center md:px-10">
-        <h2 className="font-display text-3xl text-cream md:text-4xl">Subscribe to our Newsletter</h2>
-        <p className="mt-3 text-sm text-cream/70">
+        <h2 className="font-display text-3xl text-white md:text-4xl">Subscribe to our Newsletter</h2>
+        <p className="mt-3 text-sm text-white/70">
           Be the first to know about new drops, restocks, and studio stories.
         </p>
         <form
@@ -14,11 +14,11 @@ export default function Newsletter() {
             type="email"
             required
             placeholder="Your email address"
-            className="w-full rounded-full border border-cream/20 bg-transparent px-5 py-3 text-sm text-cream placeholder:text-cream/50 focus:border-brand focus:outline-none"
+            className="w-full rounded-full border border-white/30 bg-transparent px-5 py-3 text-sm text-white placeholder:text-white/50 focus:border-white focus:outline-none"
           />
           <button
             type="submit"
-            className="shrink-0 rounded-full bg-brand px-7 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-charcoal transition-colors hover:bg-brand-dark hover:text-cream"
+            className="shrink-0 rounded-full border-2 border-white px-7 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition-colors hover:bg-white/10"
           >
             Subscribe
           </button>
