@@ -8,7 +8,7 @@ export default function ProductVideo() {
         <div className="grid items-center gap-10 md:grid-cols-2">
           {/* Replace with the real product video embed / <video> source */}
           <div className="relative aspect-video overflow-hidden rounded-3xl">
-            <PlaceholderImage label="Product Video" tone="charcoal" dark />
+            <PlaceholderImage label="Product Video" variant="hoodie" tone="charcoal" />
             <button
               type="button"
               aria-label="Play video"
@@ -21,19 +21,19 @@ export default function ProductVideo() {
           </div>
 
           <div>
-            <p className="text-xs font-medium uppercase tracking-[0.3em] text-honey-dark">In the Atelier</p>
+            <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-dark">In the Studio</p>
             <h2 className="font-display mt-3 text-3xl text-charcoal md:text-4xl">
-              Watch the Golden Hour Hoops come to life
+              See the Everyday Hoodie in motion
             </h2>
             <p className="mt-4 max-w-md text-[15px] leading-relaxed text-stone">
-              Hand-poured, hand-polished, and finished with a warm 14k gold vermeil — see why it's become our most
-              loved everyday piece.
+              Brushed organic cotton fleece, reinforced seams, and a relaxed fit built to move with you — see why
+              it's become our most-loved everyday layer.
             </p>
             <a
               href="#best-seller"
-              className="mt-7 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.15em] text-charcoal transition-colors hover:text-honey-dark"
+              className="mt-7 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.15em] text-charcoal transition-colors hover:text-brand-dark"
             >
-              Shop the Golden Hour Hoops
+              Shop the Everyday Hoodie
               <ArrowRight02Icon size={18} />
             </a>
           </div>

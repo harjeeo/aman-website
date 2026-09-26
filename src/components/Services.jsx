@@ -9,7 +9,7 @@ const services = [
   {
     icon: TruckDeliveryIcon,
     title: 'Free Shipping',
-    detail: 'Complimentary shipping on all orders over €75, delivered in 3–5 days.',
+    detail: 'Complimentary shipping on all orders over $75, delivered in 3–5 days.',
   },
   {
     icon: SecurityLockIcon,
@@ -19,7 +19,7 @@ const services = [
   {
     icon: Mail01Icon,
     title: 'Contact Us',
-    detail: 'Questions about a piece? Reach us anytime at hello@humblebee-atelier.com.',
+    detail: 'Questions about a piece? Reach us anytime at hello@verdewear.com.',
   },
 ]
 
@@ -30,7 +30,7 @@ export default function Services() {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {services.map(({ icon: Icon, title, detail }) => (
             <div key={title} className="flex flex-col items-center text-center sm:items-start sm:text-left">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-honey/15 text-honey-dark">
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand/15 text-brand-dark">
                 <Icon size={24} />
               </span>
               <h3 className="font-display mt-4 text-lg text-charcoal">{title}</h3>

@@ -33,16 +33,16 @@ export default function HeroSlider() {
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-xl">
-            <p className="text-xs font-medium uppercase tracking-[0.3em] text-honey-dark">New Season</p>
+            <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-dark">New Season</p>
             <h1 className="font-display mt-3 text-4xl leading-[1.1] text-charcoal md:text-6xl">
-              Handcrafted pieces, made to be worn every day.
+              Clothing built for movement, made to last.
             </h1>
             <p className="mt-4 max-w-md text-[15px] leading-relaxed text-stone">
-              Small-batch jewelry shaped by hand in our atelier — warm metals, honest materials, quiet detail.
+              Considered essentials in durable, natural fabrics — cut for everyday wear, designed to outlast trends.
             </p>
             <a
               href="#explore"
-              className="mt-7 inline-flex items-center gap-2 rounded-full bg-charcoal px-7 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-cream transition-colors hover:bg-honey-dark"
+              className="mt-7 inline-flex items-center gap-2 rounded-full bg-charcoal px-7 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-cream transition-colors hover:bg-brand-dark"
             >
               Shop the Collection
             </a>
@@ -53,7 +53,7 @@ export default function HeroSlider() {
               type="button"
               aria-label="Previous product"
               onClick={() => scrollToIndex((index - 1 + sliderProducts.length) % sliderProducts.length)}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-charcoal/20 text-charcoal transition-colors hover:border-honey hover:text-honey"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-charcoal/20 text-charcoal transition-colors hover:border-brand hover:text-brand"
             >
               <ArrowLeft01Icon size={18} />
             </button>
@@ -61,7 +61,7 @@ export default function HeroSlider() {
               type="button"
               aria-label="Next product"
               onClick={() => scrollToIndex((index + 1) % sliderProducts.length)}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-charcoal/20 text-charcoal transition-colors hover:border-honey hover:text-honey"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-charcoal/20 text-charcoal transition-colors hover:border-brand hover:text-brand"
             >
               <ArrowRight01Icon size={18} />
             </button>
@@ -78,11 +78,11 @@ export default function HeroSlider() {
               className="group w-[78%] shrink-0 snap-start sm:w-[46%] lg:w-[24%]"
             >
               <div className="aspect-[4/5] overflow-hidden rounded-2xl transition-transform duration-700 group-hover:scale-105">
-                <PlaceholderImage label={product.name} />
+                <PlaceholderImage label={product.name} variant={product.variant} tone="sage" />
               </div>
               <div className="mt-3 flex items-center justify-between">
                 <h3 className="font-display text-lg text-charcoal">{product.name}</h3>
-                <span className="text-sm font-medium text-honey-dark">{product.price}</span>
+                <span className="text-sm font-medium text-brand-dark">{product.price}</span>
               </div>
             </article>
           ))}
@@ -96,7 +96,7 @@ export default function HeroSlider() {
               aria-label={`Go to slide ${i + 1}`}
               onClick={() => scrollToIndex(i)}
               className={`h-1.5 rounded-full transition-all ${
-                i === index ? 'w-6 bg-honey' : 'w-1.5 bg-charcoal/20'
+                i === index ? 'w-6 bg-brand' : 'w-1.5 bg-charcoal/20'
               }`}
             />
           ))}

@@ -22,7 +22,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-sand/70 bg-cream/90 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
         <a href="#top" className="font-display text-2xl font-semibold tracking-wide text-charcoal">
-          Humblebee <span className="text-honey">Atelier</span>
+          Verde <span className="text-brand">Wear</span>
         </a>
 
         <nav className="hidden items-center gap-10 md:flex">
@@ -30,7 +30,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="text-[13px] font-medium uppercase tracking-[0.18em] text-charcoal/80 transition-colors hover:text-honey"
+              className="text-[13px] font-medium uppercase tracking-[0.18em] text-charcoal/80 transition-colors hover:text-brand"
             >
               {link.label}
             </a>
@@ -38,18 +38,18 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-5 md:flex">
-          <button type="button" aria-label="Shop" className="text-charcoal/80 transition-colors hover:text-honey">
+          <button type="button" aria-label="Shop" className="text-charcoal/80 transition-colors hover:text-brand">
             <ShoppingBag02Icon size={22} />
           </button>
-          <button type="button" aria-label="Wishlist" className="text-charcoal/80 transition-colors hover:text-honey">
+          <button type="button" aria-label="Wishlist" className="text-charcoal/80 transition-colors hover:text-brand">
             <FavouriteIcon size={22} />
           </button>
-          <button type="button" aria-label="Profile" className="text-charcoal/80 transition-colors hover:text-honey">
+          <button type="button" aria-label="Profile" className="text-charcoal/80 transition-colors hover:text-brand">
             <UserCircleIcon size={22} />
           </button>
-          <button type="button" aria-label="Cart" className="relative text-charcoal/80 transition-colors hover:text-honey">
+          <button type="button" aria-label="Cart" className="relative text-charcoal/80 transition-colors hover:text-brand">
             <ShoppingCart01Icon size={22} />
-            <span className="absolute -right-1.5 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-honey text-[10px] font-semibold text-cream">
+            <span className="absolute -right-1.5 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-brand text-[10px] font-semibold text-cream">
               2
             </span>
           </button>

@@ -4,14 +4,15 @@
   --font-display: 'Cormorant Garamond', 'Georgia', serif;
   --font-sans: 'Jost', 'Helvetica Neue', Arial, sans-serif;
 
-  --color-cream: #faf6ef;
-  --color-cream-dark: #f1e9db;
-  --color-sand: #e7dcc8;
-  --color-honey: #c8952f;
-  --color-honey-dark: #a9761f;
-  --color-charcoal: #2a2620;
-  --color-ink: #1c1a16;
-  --color-stone: #8a8071;
+  --color-cream: #f7f8f4;
+  --color-cream-dark: #edefe6;
+  --color-sand: #dde3d6;
+  --color-brand: #34a86e;
+  --color-brand-dark: #24704a;
+  --color-mint: #2fc48d;
+  --color-charcoal: #1f2620;
+  --color-ink: #14180f;
+  --color-stone: #767d70;
 }
 
 html {
@@ -28,7 +29,7 @@ body {
 }
 
 ::selection {
-  background: var(--color-honey);
+  background: var(--color-brand);
   color: var(--color-cream);
 }
 

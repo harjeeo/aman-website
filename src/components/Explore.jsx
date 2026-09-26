@@ -12,11 +12,11 @@ function ProductCard({ product, delay }) {
       style={{ animationDelay: visible ? `${delay}ms` : undefined }}
     >
       <div className="aspect-[3/4] overflow-hidden rounded-2xl">
-        <PlaceholderImage label={product.name} tone="honey" />
+        <PlaceholderImage label={product.name} variant={product.variant} tone="mint" />
       </div>
       <div className="mt-3 flex items-center justify-between">
         <h3 className="font-display text-lg text-charcoal">{product.name}</h3>
-        <span className="text-sm font-medium text-honey-dark">{product.price}</span>
+        <span className="text-sm font-medium text-brand-dark">{product.price}</span>
       </div>
     </article>
   )
@@ -29,8 +29,8 @@ export default function Explore() {
     <section id="explore" className="bg-cream-dark py-20">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <div className="flex flex-col items-center text-center">
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-honey-dark">Explore</p>
-          <h2 className="font-display mt-2 text-3xl text-charcoal md:text-4xl">Find your everyday piece</h2>
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-dark">Explore</p>
+          <h2 className="font-display mt-2 text-3xl text-charcoal md:text-4xl">Find your everyday fit</h2>
         </div>
 
         <div className="mt-8 flex items-center justify-center gap-8 border-b border-charcoal/10">
@@ -45,7 +45,7 @@ export default function Explore() {
             >
               {tab}
               {active === tab && (
-                <span className="absolute inset-x-0 -bottom-px h-[2px] bg-honey" />
+                <span className="absolute inset-x-0 -bottom-px h-[2px] bg-brand" />
               )}
             </button>
           ))}

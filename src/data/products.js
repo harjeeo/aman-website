@@ -1,40 +1,42 @@
 // Placeholder catalog data — swap in real product names, prices & photography.
 export const sliderProducts = [
-  { id: 'sl-1', name: 'Amber Drop Earrings', price: '€68' },
-  { id: 'sl-2', name: 'Honeycomb Pendant', price: '€92' },
-  { id: 'sl-3', name: 'Woven Cuff Bracelet', price: '€54' },
-  { id: 'sl-4', name: 'Meadow Signet Ring', price: '€76' },
+  { id: 'sl-1', name: 'Heavyweight Tee', price: '$38', variant: 'tee' },
+  { id: 'sl-2', name: 'Trail Hoodie', price: '$74', variant: 'hoodie' },
+  { id: 'sl-3', name: 'Field Jacket', price: '$128', variant: 'jacket' },
+  { id: 'sl-4', name: 'Utility Joggers', price: '$62', variant: 'joggers' },
 ]
 
 export const exploreTabs = ['Best Seller', 'New In', 'Bundles']
 
 export const exploreProducts = {
   'Best Seller': [
-    { id: 'bs-1', name: 'Golden Hour Hoops', price: '€58' },
-    { id: 'bs-2', name: 'Nectar Chain Necklace', price: '€89' },
-    { id: 'bs-3', name: 'Wildflower Studs', price: '€42' },
-    { id: 'bs-4', name: 'Beeswax Bangle', price: '€64' },
+    { id: 'bs-1', name: 'Everyday Hoodie', price: '$74', variant: 'hoodie' },
+    { id: 'bs-2', name: 'Classic Crew Tee', price: '$36', variant: 'tee' },
+    { id: 'bs-3', name: 'Canvas Tote', price: '$28', variant: 'tote' },
+    { id: 'bs-4', name: 'Low-Top Sneaker', price: '$96', variant: 'sneaker' },
   ],
   'New In': [
-    { id: 'ni-1', name: 'Clover Charm Bracelet', price: '€71' },
-    { id: 'ni-2', name: 'Sunlit Layer Necklace', price: '€96' },
-    { id: 'ni-3', name: 'Petal Drop Earrings', price: '€49' },
-    { id: 'ni-4', name: 'Harvest Ring Set', price: '€67' },
+    { id: 'ni-1', name: 'Wool Overshirt', price: '$118', variant: 'jacket' },
+    { id: 'ni-2', name: 'Midi Slip Dress', price: '$88', variant: 'dress' },
+    { id: 'ni-3', name: 'Ribbed Beanie', price: '$24', variant: 'cap' },
+    { id: 'ni-4', name: 'Wide-Leg Joggers', price: '$66', variant: 'joggers' },
   ],
   Bundles: [
-    { id: 'bd-1', name: 'The Meadow Set', price: '€135' },
-    { id: 'bd-2', name: 'The Honeycomb Duo', price: '€110' },
-    { id: 'bd-3', name: 'The Golden Trio', price: '€148' },
-    { id: 'bd-4', name: 'The Everyday Stack', price: '€99' },
+    { id: 'bd-1', name: 'The Weekend Set', price: '$142', variant: 'hoodie' },
+    { id: 'bd-2', name: 'The Layer Kit', price: '$168', variant: 'jacket' },
+    { id: 'bd-3', name: 'The Essentials Duo', price: '$96', variant: 'tee' },
+    { id: 'bd-4', name: 'The Accessory Edit', price: '$58', variant: 'scarf' },
   ],
 }
 
 export const bestSeller = {
-  name: 'Golden Hour Hoops',
-  price: '€58.00',
+  name: 'Everyday Hoodie',
+  price: '$74.00',
   rating: 5,
-  reviewCount: 128,
-  color: 'Honey Gold',
-  stock: 14,
+  reviewCount: 214,
+  color: 'Forest Green',
+  stock: 22,
+  variant: 'hoodie',
   galleryCount: 4,
+  galleryVariants: ['hoodie', 'tee', 'joggers', 'sneaker'],
 }
