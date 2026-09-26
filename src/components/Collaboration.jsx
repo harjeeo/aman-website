@@ -1,22 +1,41 @@
 import { ArrowRight02Icon } from 'hugeicons-react'
 import PlaceholderImage from './PlaceholderImage'
 
-export default function Collaboration() {
+const tiles = [
+  { caption: 'Trail Jacket', variant: 'jacket', tone: 'sage', aspect: 'aspect-[4/5]', labelPos: 'bottom' },
+  { caption: 'Trail Sneaker', variant: 'sneaker', tone: 'green', aspect: 'aspect-[4/3]', labelPos: 'top' },
+  { caption: 'Trail Cap', variant: 'cap', tone: 'mint', aspect: 'aspect-[4/3]', labelPos: 'bottom' },
+]
+
+function Tile({ caption, variant, tone, aspect, labelPos }) {
+  const top = labelPos === 'top'
   return (
-    <section className="bg-deep py-14">
+    <div className={`relative ${aspect} overflow-hidden rounded-2xl`}>
+      <PlaceholderImage variant={variant} tone={tone} decorative />
+      <div
+        className={`absolute inset-0 ${top ? 'bg-gradient-to-b' : 'bg-gradient-to-t'} from-charcoal/60 via-transparent to-transparent`}
+      />
+      <p
+        className={`absolute left-4 text-xs font-medium uppercase tracking-[0.15em] text-cream ${top ? 'top-3' : 'bottom-3'}`}
+      >
+        {caption}
+      </p>
+    </div>
+  )
+}
+
+export default function Collaboration() {
+  const [main, top, bottom] = tiles
+
+  return (
+    <section className="bg-cream-dark py-14">
       <div className="mx-auto max-w-3xl px-6 md:px-10">
         <div className="relative grid grid-cols-2 gap-3 md:gap-4">
-          <div className="aspect-[4/5] overflow-hidden rounded-2xl">
-            <PlaceholderImage label="Collaboration Piece" variant="jacket" tone="sage" />
-          </div>
+          <Tile {...main} />
 
           <div className="grid gap-3 md:gap-4">
-            <div className="aspect-[4/3] overflow-hidden rounded-2xl">
-              <PlaceholderImage label="Collaboration Detail" variant="sneaker" tone="green" />
-            </div>
-            <div className="aspect-[4/3] overflow-hidden rounded-2xl">
-              <PlaceholderImage label="Collaboration Detail" variant="cap" tone="mint" />
-            </div>
+            <Tile {...top} />
+            <Tile {...bottom} />
           </div>
 
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
@@ -25,7 +44,7 @@ export default function Collaboration() {
               <h2 className="font-display mt-1 text-2xl text-charcoal md:text-3xl">Atlas Trail Co.</h2>
               <a
                 href="#explore"
-                className="mt-3 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-charcoal transition-colors hover:text-brand-dark"
+                className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-cream transition-colors hover:bg-brand-dark"
               >
                 Discover the Edit
                 <ArrowRight02Icon size={16} />
