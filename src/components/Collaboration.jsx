@@ -11,14 +11,16 @@ function Tile({ caption, variant, tone, aspect }) {
   return (
     <div className={`relative ${aspect} overflow-hidden rounded-2xl`}>
       <PlaceholderImage variant={variant} tone={tone} decorative />
-      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
-      <a
-        href="#explore"
-        className="absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-cream/95 py-1.5 pl-3 pr-2 text-[11px] font-semibold uppercase tracking-[0.1em] text-charcoal shadow-md backdrop-blur transition-colors hover:bg-mint"
-      >
-        {caption}
-        <ArrowRight02Icon size={14} />
-      </a>
+      <div className="absolute inset-0 bg-charcoal/20" />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <a
+          href="#explore"
+          className="inline-flex items-center gap-1.5 rounded-full bg-cream/95 py-1.5 pl-3 pr-2 text-[11px] font-semibold uppercase tracking-[0.1em] text-charcoal shadow-md backdrop-blur transition-colors hover:bg-mint"
+        >
+          {caption}
+          <ArrowRight02Icon size={14} />
+        </a>
+      </div>
     </div>
   )
 }
