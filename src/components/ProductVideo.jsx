@@ -1,37 +1,35 @@
-import { PlayCircleIcon, ArrowRight02Icon } from 'hugeicons-react'
+import { ArrowRight02Icon } from 'hugeicons-react'
 import PlaceholderImage from './PlaceholderImage'
 
 export default function ProductVideo() {
   return (
-    <section className="bg-cream py-20">
-      <div className="mx-auto max-w-7xl px-6 md:px-10">
-        <div className="grid items-center gap-10 md:grid-cols-2">
-          {/* Replace with the real product video embed / <video> source */}
-          <div className="relative aspect-video overflow-hidden rounded-3xl">
-            <PlaceholderImage label="Product Video" variant="hoodie" tone="charcoal" />
-            <button
-              type="button"
-              aria-label="Play video"
-              className="absolute inset-0 flex items-center justify-center bg-charcoal/20 transition-colors hover:bg-charcoal/30"
-            >
-              <span className="flex h-20 w-20 items-center justify-center rounded-full bg-cream/90 text-charcoal shadow-lg">
-                <PlayCircleIcon size={40} />
-              </span>
-            </button>
-          </div>
+    <section className="bg-mist py-20">
+      <div className="mx-auto max-w-5xl px-6 md:px-10">
+        <div className="relative aspect-video overflow-hidden rounded-3xl">
+          {/* Fallback art shows until a real video source is added below */}
+          <PlaceholderImage tone="charcoal" decorative className="absolute inset-0" />
 
-          <div>
-            <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-dark">In the Studio</p>
-            <h2 className="font-display mt-3 text-3xl text-charcoal md:text-4xl">
+          {/* Replace src with the real product video file — autoplay requires muted */}
+          <video
+            className="absolute inset-0 h-full w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src="/videos/product.mp4" type="video/mp4" />
+          </video>
+
+          <div className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/10 to-transparent" />
+
+          <div className="absolute inset-x-0 bottom-0 flex flex-col items-start p-6 md:p-10">
+            <p className="text-xs font-medium uppercase tracking-[0.3em] text-mint">In the Studio</p>
+            <h2 className="font-display mt-2 max-w-md text-2xl leading-tight text-cream md:text-3xl">
               See the Everyday Hoodie in motion
             </h2>
-            <p className="mt-4 max-w-md text-[15px] leading-relaxed text-stone">
-              Brushed organic cotton fleece, reinforced seams, and a relaxed fit built to move with you — see why
-              it's become our most-loved everyday layer.
-            </p>
             <a
-              href="#best-seller"
-              className="mt-7 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.15em] text-charcoal transition-colors hover:text-brand-dark"
+              href="#explore"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.15em] text-cream transition-colors hover:text-mint"
             >
               Shop the Everyday Hoodie
               <ArrowRight02Icon size={18} />

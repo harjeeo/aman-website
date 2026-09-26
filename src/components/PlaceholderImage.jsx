@@ -8,7 +8,9 @@ const tones = {
 }
 
 // Editorial-style stand-in tile with a hand-drawn garment icon — swap for real photography.
-export default function PlaceholderImage({ label, variant = 'tee', tone = 'sage', className = '' }) {
+// Pass `decorative` when the tile sits behind foreground text (hero/video banners) so the
+// icon + label don't compete with the overlay copy.
+export default function PlaceholderImage({ label, variant = 'tee', tone = 'sage', decorative = false, className = '' }) {
   const { bg, ink } = tones[tone] ?? tones.sage
   const dark = tone === 'charcoal'
 
@@ -22,14 +24,16 @@ export default function PlaceholderImage({ label, variant = 'tee', tone = 'sage'
           color: dark ? '#f7f8f4' : '#1f2620',
         }}
       />
-      <div className="relative flex flex-col items-center gap-3 px-4 text-center">
-        <GarmentArt variant={variant} className={`h-16 w-16 md:h-20 md:w-20 ${ink}`} />
-        {label && (
-          <span className={`text-[11px] font-medium uppercase tracking-[0.15em] ${dark ? 'text-cream/60' : 'text-charcoal/45'}`}>
-            {label}
-          </span>
-        )}
-      </div>
+      {!decorative && (
+        <div className="relative flex flex-col items-center gap-3 px-4 text-center">
+          <GarmentArt variant={variant} className={`h-16 w-16 md:h-20 md:w-20 ${ink}`} />
+          {label && (
+            <span className={`text-[11px] font-medium uppercase tracking-[0.15em] ${dark ? 'text-cream/60' : 'text-charcoal/45'}`}>
+              {label}
+            </span>
+          )}
+        </div>
+      )}
     </div>
   )
 }

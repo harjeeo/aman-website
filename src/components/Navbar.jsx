@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import {
-  ShoppingBag02Icon,
+  Search01Icon,
   FavouriteIcon,
   UserCircleIcon,
   ShoppingCart01Icon,
@@ -11,7 +11,7 @@ import {
 const links = [
   { label: 'Home', href: '#top' },
   { label: 'Shop', href: '#explore' },
-  { label: 'Category', href: '#explore' },
+  { label: 'Collection', href: '#collection' },
   { label: 'Contact Us', href: '#contact-us' },
 ]
 
@@ -38,8 +38,8 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-5 md:flex">
-          <button type="button" aria-label="Shop" className="text-charcoal/80 transition-colors hover:text-brand">
-            <ShoppingBag02Icon size={22} />
+          <button type="button" aria-label="Search" className="text-charcoal/80 transition-colors hover:text-brand">
+            <Search01Icon size={22} />
           </button>
           <button type="button" aria-label="Wishlist" className="text-charcoal/80 transition-colors hover:text-brand">
             <FavouriteIcon size={22} />
@@ -80,7 +80,7 @@ export default function Navbar() {
             ))}
           </nav>
           <div className="mt-5 flex items-center gap-6 border-t border-sand/70 pt-5">
-            <ShoppingBag02Icon size={22} />
+            <Search01Icon size={22} />
             <FavouriteIcon size={22} />
             <UserCircleIcon size={22} />
             <ShoppingCart01Icon size={22} />

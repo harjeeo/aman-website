@@ -1,11 +1,4 @@
 // Placeholder catalog data — swap in real product names, prices & photography.
-export const sliderProducts = [
-  { id: 'sl-1', name: 'Heavyweight Tee', price: '$38', variant: 'tee' },
-  { id: 'sl-2', name: 'Trail Hoodie', price: '$74', variant: 'hoodie' },
-  { id: 'sl-3', name: 'Field Jacket', price: '$128', variant: 'jacket' },
-  { id: 'sl-4', name: 'Utility Joggers', price: '$62', variant: 'joggers' },
-]
-
 export const exploreTabs = ['Best Seller', 'New In', 'Bundles']
 
 export const exploreProducts = {
@@ -27,16 +20,4 @@ export const exploreProducts = {
     { id: 'bd-3', name: 'The Essentials Duo', price: '$96', variant: 'tee' },
     { id: 'bd-4', name: 'The Accessory Edit', price: '$58', variant: 'scarf' },
   ],
-}
-
-export const bestSeller = {
-  name: 'Everyday Hoodie',
-  price: '$74.00',
-  rating: 5,
-  reviewCount: 214,
-  color: 'Forest Green',
-  stock: 22,
-  variant: 'hoodie',
-  galleryCount: 4,
-  galleryVariants: ['hoodie', 'tee', 'joggers', 'sneaker'],
 }
