@@ -1,7 +1,23 @@
-import { ArrowRight02Icon } from 'hugeicons-react'
+import { useRef, useState } from 'react'
+import { ArrowRight02Icon, PlayIcon, PauseIcon } from 'hugeicons-react'
 import PlaceholderImage from './PlaceholderImage'
 
 export default function ProductVideo() {
+  const videoRef = useRef(null)
+  const [playing, setPlaying] = useState(true)
+
+  const togglePlay = () => {
+    const video = videoRef.current
+    if (!video) return
+    if (video.paused) {
+      video.play()
+      setPlaying(true)
+    } else {
+      video.pause()
+      setPlaying(false)
+    }
+  }
+
   return (
     <section className="bg-dark py-20">
       <div className="mx-auto max-w-5xl px-6 md:px-10">
@@ -11,6 +27,7 @@ export default function ProductVideo() {
 
           {/* Replace src with the real product video file — autoplay requires muted */}
           <video
+            ref={videoRef}
             className="absolute inset-0 h-full w-full object-cover"
             autoPlay
             muted
@@ -20,16 +37,25 @@ export default function ProductVideo() {
             <source src="/videos/product.mp4" type="video/mp4" />
           </video>
 
-          <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/10 to-transparent" />
+          <div className="absolute inset-0 bg-dark/45" />
 
-          <div className="absolute inset-x-0 bottom-0 flex flex-col items-start p-6 md:p-10">
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 p-6 text-center md:p-10">
+            <button
+              type="button"
+              onClick={togglePlay}
+              aria-label={playing ? 'Pause video' : 'Play video'}
+              className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-white text-white transition-colors hover:bg-white/10"
+            >
+              {playing ? <PauseIcon size={22} /> : <PlayIcon size={22} />}
+            </button>
+
             <p className="text-xs font-medium uppercase tracking-[0.3em] text-white/70">In the Studio</p>
-            <h2 className="font-display mt-2 max-w-md text-2xl leading-tight text-white md:text-3xl">
+            <h2 className="font-display max-w-md text-2xl leading-tight text-white md:text-3xl">
               See the Everyday Hoodie in motion
             </h2>
             <a
               href="#explore"
-              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.15em] text-white transition-colors hover:text-white/60"
+              className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.15em] text-white transition-colors hover:text-white/60"
             >
               Shop the Everyday Hoodie
               <ArrowRight02Icon size={18} />
