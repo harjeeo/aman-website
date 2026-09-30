@@ -2,7 +2,7 @@ import { ArrowRight02Icon } from 'hugeicons-react'
 import PlaceholderImage from './PlaceholderImage'
 
 const tiles = [
-  { caption: 'Trail Jacket', variant: 'jacket', tone: 'dark', aspect: 'aspect-[4/5]' },
+  { caption: 'Trail Jacket', variant: 'jacket', tone: 'dark', aspect: 'h-full' },
   { caption: 'Trail Sneaker', variant: 'sneaker', tone: 'mid', aspect: 'aspect-[4/3]' },
   { caption: 'Trail Cap', variant: 'cap', tone: 'dark', aspect: 'aspect-[4/3]' },
 ]
