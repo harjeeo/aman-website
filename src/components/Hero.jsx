@@ -2,7 +2,7 @@ import PlaceholderImage from './PlaceholderImage'
 
 export default function Hero() {
   return (
-    <section id="top" className="relative h-[380px] w-full overflow-hidden sm:h-[440px] md:h-[500px]">
+    <section id="top" className="relative h-[380px] w-full overflow-hidden sm:h-[420px] md:h-[380px]">
       <PlaceholderImage tone="mid" decorative className="scale-110" />
       <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/30 to-dark/10" />
 
