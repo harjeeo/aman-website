@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FilterIcon, ArrowDown01Icon, Cancel01Icon, ShoppingCart01Icon } from 'hugeicons-react'
 import { exploreTabs, allProducts } from '../data/products'
+import { useCart } from '../context/CartContext'
 import PlaceholderImage from '../components/PlaceholderImage'
 import FilterDrawer from '../components/FilterDrawer'
 
@@ -23,6 +24,7 @@ const sortOptions = [
 const defaultFilters = { categories: [], types: [], priceMax: priceBounds.max }
 
 function ProductCard({ product }) {
+  const { addItem } = useCart()
   return (
     <article className="group">
       <Link to={`/product/${product.id}`} className="relative block aspect-[3/4] overflow-hidden rounded-2xl">
@@ -32,6 +34,7 @@ function ProductCard({ product }) {
           onClick={(e) => {
             e.preventDefault()
             e.stopPropagation()
+            addItem(product, { qty: 1 })
           }}
           aria-label={`Add ${product.name} to cart`}
           className="absolute bottom-3 right-3 flex h-10 w-10 items-center justify-center rounded-full border-2 border-white text-white opacity-0 transition-opacity group-hover:opacity-100"

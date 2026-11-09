@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { StarIcon, Add01Icon, Remove01Icon, ShoppingCart01Icon, ArrowLeft02Icon } from 'hugeicons-react'
 import { allProducts } from '../data/products'
+import { useCart } from '../context/CartContext'
 import PlaceholderImage from '../components/PlaceholderImage'
 
 const sizes = ['S', 'M', 'L', 'XL']
@@ -24,6 +25,7 @@ export default function Product() {
   const { id } = useParams()
   const product = allProducts.find((p) => p.id === id)
 
+  const { addItem } = useCart()
   const [size, setSize] = useState(sizes[1])
   const [qty, setQty] = useState(1)
 
@@ -118,6 +120,7 @@ export default function Product() {
 
               <button
                 type="button"
+                onClick={() => addItem(product, { size, qty })}
                 className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-white py-4 text-xs font-semibold uppercase tracking-[0.2em] text-white transition-colors hover:bg-white/10 sm:w-auto sm:px-10"
               >
                 <ShoppingCart01Icon size={18} />
