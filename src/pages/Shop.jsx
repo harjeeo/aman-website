@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { FilterIcon, ArrowDown01Icon, Cancel01Icon, ShoppingCart01Icon } from 'hugeicons-react'
 import { exploreTabs, allProducts } from '../data/products'
 import PlaceholderImage from '../components/PlaceholderImage'
@@ -24,20 +25,24 @@ const defaultFilters = { categories: [], types: [], priceMax: priceBounds.max }
 function ProductCard({ product }) {
   return (
     <article className="group">
-      <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
+      <Link to={`/product/${product.id}`} className="relative block aspect-[3/4] overflow-hidden rounded-2xl">
         <PlaceholderImage label={product.name} variant={product.variant} tone="dark" />
         <button
           type="button"
+          onClick={(e) => {
+            e.preventDefault()
+            e.stopPropagation()
+          }}
           aria-label={`Add ${product.name} to cart`}
           className="absolute bottom-3 right-3 flex h-10 w-10 items-center justify-center rounded-full border-2 border-white text-white opacity-0 transition-opacity group-hover:opacity-100"
         >
           <ShoppingCart01Icon size={18} />
         </button>
-      </div>
-      <div className="mt-3 flex items-center justify-between">
+      </Link>
+      <Link to={`/product/${product.id}`} className="mt-3 flex items-center justify-between">
         <h3 className="font-display text-lg text-white">{product.name}</h3>
         <span className="text-sm font-medium text-white/70">{product.price}</span>
-      </div>
+      </Link>
       <p className="mt-0.5 text-xs uppercase tracking-[0.1em] text-white/50">{product.category}</p>
     </article>
   )

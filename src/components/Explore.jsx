@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { exploreTabs, exploreProducts } from '../data/products'
 import { useReveal } from '../hooks/useReveal'
 import PlaceholderImage from './PlaceholderImage'
@@ -6,9 +7,10 @@ import PlaceholderImage from './PlaceholderImage'
 function ProductCard({ product, delay }) {
   const [ref, visible] = useReveal(0.15)
   return (
-    <article
+    <Link
+      to={`/product/${product.id}`}
       ref={ref}
-      className={visible ? 'reveal-up' : 'opacity-0'}
+      className={`block ${visible ? 'reveal-up' : 'opacity-0'}`}
       style={{ animationDelay: visible ? `${delay}ms` : undefined }}
     >
       <div className="aspect-[3/4] overflow-hidden rounded-2xl">
@@ -18,7 +20,7 @@ function ProductCard({ product, delay }) {
         <h3 className="font-display text-lg text-white">{product.name}</h3>
         <span className="text-sm font-medium text-white/70">{product.price}</span>
       </div>
-    </article>
+    </Link>
   )
 }
 
