@@ -4,6 +4,7 @@ import { StarIcon, Add01Icon, Remove01Icon, ShoppingCart01Icon, ArrowLeft02Icon 
 import { allProducts } from '../data/products'
 import { useCart } from '../context/CartContext'
 import PlaceholderImage from '../components/PlaceholderImage'
+import Accordion from '../components/Accordion'
 
 const sizes = ['S', 'M', 'L', 'XL']
 
@@ -73,8 +74,6 @@ export default function Product() {
                 <span className="text-sm text-white/60">(128 reviews)</span>
               </div>
 
-              <p className="mt-5 max-w-md text-[15px] leading-relaxed text-white/70">{product.description}</p>
-
               <hr className="my-6 border-white/15" />
 
               <div>
@@ -128,6 +127,24 @@ export default function Product() {
               </button>
 
               <p className="mt-4 text-xs text-white/50">In stock, ready to ship in 1–2 business days.</p>
+
+              <div className="mt-8">
+                <Accordion title="Description" defaultOpen>
+                  <p>{product.description}</p>
+                </Accordion>
+                <Accordion title="Specifications">
+                  <dl className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <dt className="text-white/50">Material</dt>
+                      <dd className="text-white">{product.material}</dd>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <dt className="text-white/50">Country of Origin</dt>
+                      <dd className="text-white">{product.origin}</dd>
+                    </div>
+                  </dl>
+                </Accordion>
+              </div>
             </div>
           </div>
         </div>

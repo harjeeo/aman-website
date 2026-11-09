@@ -9,6 +9,8 @@ export const exploreProducts = {
       price: '$74',
       variant: 'hoodie',
       description: 'Brushed organic cotton fleece with a relaxed fit, built to move with you and soften with every wash.',
+      material: 'Organic Cotton Fleece',
+      origin: 'Portugal',
     },
     {
       id: 'bs-2',
@@ -16,6 +18,8 @@ export const exploreProducts = {
       price: '$36',
       variant: 'tee',
       description: 'Heavyweight combed cotton in a clean, classic cut — the tee you reach for every single day.',
+      material: 'Combed Cotton',
+      origin: 'Portugal',
     },
     {
       id: 'bs-3',
@@ -23,6 +27,8 @@ export const exploreProducts = {
       price: '$28',
       variant: 'tote',
       description: 'Durable waxed canvas with reinforced stitching, roomy enough for a full day of errands.',
+      material: 'Waxed Canvas',
+      origin: 'India',
     },
     {
       id: 'bs-4',
@@ -30,6 +36,8 @@ export const exploreProducts = {
       price: '$96',
       variant: 'sneaker',
       description: 'A minimal low-top silhouette in full-grain leather, finished with a cushioned sole for all-day wear.',
+      material: 'Full-Grain Leather',
+      origin: 'Portugal',
     },
   ],
   'New In': [
@@ -39,6 +47,8 @@ export const exploreProducts = {
       price: '$118',
       variant: 'jacket',
       description: 'A mid-weight wool overshirt cut for layering, with a soft brushed finish and horn buttons.',
+      material: 'Wool Blend',
+      origin: 'Italy',
     },
     {
       id: 'ni-2',
@@ -46,6 +56,8 @@ export const exploreProducts = {
       price: '$88',
       variant: 'dress',
       description: 'Bias-cut recycled satin that skims the body, finished with adjustable straps for an easy fit.',
+      material: 'Recycled Satin',
+      origin: 'Portugal',
     },
     {
       id: 'ni-3',
@@ -53,6 +65,8 @@ export const exploreProducts = {
       price: '$24',
       variant: 'cap',
       description: 'A snug ribbed knit in responsibly sourced wool, made to layer under any hood or hat.',
+      material: 'Responsibly Sourced Wool',
+      origin: 'Nepal',
     },
     {
       id: 'ni-4',
@@ -60,6 +74,8 @@ export const exploreProducts = {
       price: '$66',
       variant: 'joggers',
       description: 'Relaxed wide-leg joggers in brushed fleece with an elastic waist and tapered ankle cuffs.',
+      material: 'Brushed Cotton Fleece',
+      origin: 'Portugal',
     },
   ],
   Bundles: [
@@ -69,6 +85,8 @@ export const exploreProducts = {
       price: '$142',
       variant: 'hoodie',
       description: 'Our Everyday Hoodie paired with matching joggers — the complete off-duty uniform, bundled to save.',
+      material: 'Organic Cotton Fleece',
+      origin: 'Portugal',
     },
     {
       id: 'bd-2',
@@ -76,6 +94,8 @@ export const exploreProducts = {
       price: '$168',
       variant: 'jacket',
       description: 'Overshirt, tee, and beanie bundled together for effortless layering through every season.',
+      material: 'Wool Blend / Cotton',
+      origin: 'Italy',
     },
     {
       id: 'bd-3',
@@ -83,6 +103,8 @@ export const exploreProducts = {
       price: '$96',
       variant: 'tee',
       description: 'Two of our best-selling crew tees in rotating colorways — the foundation of any wardrobe.',
+      material: 'Combed Cotton',
+      origin: 'Portugal',
     },
     {
       id: 'bd-4',
@@ -90,6 +112,8 @@ export const exploreProducts = {
       price: '$58',
       variant: 'scarf',
       description: 'A soft wool scarf and ribbed beanie set, designed to mix and match with everything else you own.',
+      material: 'Wool',
+      origin: 'Nepal',
     },
   ],
 }
