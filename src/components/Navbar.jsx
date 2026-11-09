@@ -14,7 +14,7 @@ const links = [
   { label: 'Home', href: '/', internal: true },
   { label: 'Shop', href: '/shop', internal: true },
   { label: 'Collection', href: '/#collection' },
-  { label: 'Contact Us', href: '/#contact-us' },
+  { label: 'Contact Us', href: '/contact', internal: true },
 ]
 
 export default function Navbar() {

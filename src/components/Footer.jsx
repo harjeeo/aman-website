@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const columns = [
   {
     title: 'Shop',
@@ -9,12 +11,22 @@ const columns = [
   },
   {
     title: 'Focals',
-    links: ['Contact Us', 'Blog', 'Our Story'],
+    links: [
+      { label: 'Contact Us', href: '/contact' },
+      { label: 'Blog', href: '/' },
+      { label: 'Our Story', href: '/about' },
+    ],
   },
   {
     title: 'Follow Us',
     links: [],
   },
+]
+
+const legalLinks = [
+  { label: 'Terms & Conditions', href: '/terms-and-conditions' },
+  { label: 'Privacy Policy', href: '/privacy-policy' },
+  { label: 'Refund & Cancellation Policy', href: '/refund-and-cancellation-policy' },
 ]
 
 export default function Footer() {
@@ -33,21 +45,34 @@ export default function Footer() {
             <div key={col.title}>
               <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-white">{col.title}</h4>
               <ul className="mt-4 space-y-2">
-                {col.links.map((link) => (
-                  <li key={link}>
-                    <a href="#top" className="text-sm text-white/60 transition-colors hover:text-white">
-                      {link}
-                    </a>
-                  </li>
-                ))}
+                {col.links.map((link) => {
+                  const label = typeof link === 'string' ? link : link.label
+                  const href = typeof link === 'string' ? '/shop' : link.href
+                  return (
+                    <li key={label}>
+                      <Link to={href} className="text-sm text-white/60 transition-colors hover:text-white">
+                        {label}
+                      </Link>
+                    </li>
+                  )
+                })}
               </ul>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row">
-          <p>&copy; {new Date().getFullYear()} Verde Wear. All rights reserved.</p>
-          <p>Designed for everyday wear.</p>
+        <div className="mt-12 flex flex-col items-center gap-4 border-t border-white/10 pt-6 text-xs text-white/50">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            {legalLinks.map((link) => (
+              <Link key={link.href} to={link.href} className="transition-colors hover:text-white">
+                {link.label}
+              </Link>
+            ))}
+          </div>
+          <div className="flex flex-col items-center justify-between gap-2 sm:w-full sm:flex-row">
+            <p>&copy; {new Date().getFullYear()} Verde Wear. All rights reserved.</p>
+            <p>Designed for everyday wear.</p>
+          </div>
         </div>
       </div>
     </footer>
