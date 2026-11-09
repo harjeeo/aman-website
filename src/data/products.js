@@ -21,3 +21,7 @@ export const exploreProducts = {
     { id: 'bd-4', name: 'The Accessory Edit', price: '$58', variant: 'scarf' },
   ],
 }
+
+export const allProducts = Object.entries(exploreProducts).flatMap(([category, items]) =>
+  items.map((item) => ({ ...item, category })),
+)

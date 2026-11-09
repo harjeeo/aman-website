@@ -1,28 +1,18 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Collection from './components/Collection'
-import Explore from './components/Explore'
-import ProductVideo from './components/ProductVideo'
-import Collaboration from './components/Collaboration'
-import Services from './components/Services'
-import Newsletter from './components/Newsletter'
-import Footer from './components/Footer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout'
+import Home from './pages/Home'
+import Shop from './pages/Shop'
 
 function App() {
   return (
-    <div className="min-h-screen bg-dark">
-      <Navbar />
-      <main>
-        <Hero />
-        <Collection />
-        <Explore />
-        <ProductVideo />
-        <Collaboration />
-        <Services />
-        <Newsletter />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

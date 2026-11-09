@@ -13,7 +13,8 @@
     "@hugeicons/core-free-icons": "^4.3.5",
     "hugeicons-react": "^0.4.0",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.5"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",

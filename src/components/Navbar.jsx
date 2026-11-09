@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import {
   Search01Icon,
   FavouriteIcon,
@@ -9,10 +10,10 @@ import {
 } from 'hugeicons-react'
 
 const links = [
-  { label: 'Home', href: '#top' },
-  { label: 'Shop', href: '#explore' },
-  { label: 'Collection', href: '#collection' },
-  { label: 'Contact Us', href: '#contact-us' },
+  { label: 'Home', href: '/' },
+  { label: 'Shop', href: '/shop' },
+  { label: 'Collection', href: '/#collection' },
+  { label: 'Contact Us', href: '/#contact-us' },
 ]
 
 export default function Navbar() {
@@ -21,9 +22,9 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-mid/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
-        <a href="#top" className="font-display text-2xl font-semibold tracking-wide text-white">
+        <Link to="/" className="font-display text-2xl font-semibold tracking-wide text-white">
           Verde Wear
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-10 md:flex">
           {links.map((link) => (
